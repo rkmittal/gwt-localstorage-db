@@ -1,0 +1,28 @@
+#summary Getting started with gwt-localstorage-db
+
+= Getting started =
+
+The steps to using the API are:
+  * Download the latest release of gwt-localstorage-api.jar file
+  * Also download the latest java-docs, since they will be important in understanding how to use the API.
+  * Add the jar file to your build path in Eclipse/put it in your pom.xml as an artifact (The API needs atleast GWT v2.3.0 )
+  * Include this code, which will initialize the local storage, so that you can start using the API.
+
+{{{
+try {
+	Storage storage = Storage.getLocalStorageIfSupported();
+	if (storage==null)
+		throw new LocalStorageDatabaseException("Local storage not supported in the browser");
+	else {
+		LdbApi.initialize(storage);
+	}
+} catch (LocalStorageDatabaseException e) {
+	e.printStackTrace();
+	//catch the exception and display on browser etc.
+}
+}}}
+
+  * LdbApi is the main class that contains all the methods that a developer will use in his code. Refer to java docs to find out what are the methods you can execute. Don't forget to put a try-catch, where you will be catching exceptions of type LocalStorageDatabaseException, same as is shown in the above code snippet.
+
+==Statutory Warning==
+The API deals with storage of data on the client-side, and in many cases, the data may be valuable for the user of the application. Any data-loss resulting from the use of this API does not hold me responsible (Read the license text). So you are advised to thoroughly test the API before releasing your application to the public.
