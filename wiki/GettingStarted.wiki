@@ -31,6 +31,7 @@ LdbQueryBrowser lqb = new LdbQueryBrowser();
 rootPanel.add(lqb); // or add it to any other place
 }}}
 
+Move to the LdbQueryBrowser wiki page for help related to Query browser.
 
 ==Statutory Warning==
 The API deals with storage of data on the client-side, and in many cases, the data may be valuable for the user of the application. Any data-loss resulting from the use of this API does not hold me responsible (Read the license text). So you are advised to thoroughly test the API before releasing your application to the public.
