@@ -24,5 +24,13 @@ try {
 
   * LdbApi is the main class that contains all the methods that a developer will use in his code. Refer to java docs to find out what are the methods you can execute. Don't forget to put a try-catch, where you will be catching exceptions of type LocalStorageDatabaseException, same as is shown in the above code snippet.
 
+  * There is a query browser that comes with the API which can also be put in your own application. The query browser is defined as a widget, which you can easily add to your application like this:
+
+{{{
+LdbQueryBrowser lqb = new LdbQueryBrowser();
+rootPanel.add(lqb); // or add it to any other place
+}}}
+
+
 ==Statutory Warning==
 The API deals with storage of data on the client-side, and in many cases, the data may be valuable for the user of the application. Any data-loss resulting from the use of this API does not hold me responsible (Read the license text). So you are advised to thoroughly test the API before releasing your application to the public.
