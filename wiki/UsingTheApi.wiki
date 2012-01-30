@@ -1,4 +1,5 @@
 #summary A tutorial to quickly start the user on using this API
+#labels Featured
 
 = A short tutorial on using the API =
 
