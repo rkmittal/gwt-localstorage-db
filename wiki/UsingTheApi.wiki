@@ -86,3 +86,6 @@ Drops the database called 'ecollect' and deletes all data, object stores inside 
 {{{
 LdbApi.dropDatabase("ecollect");
 }}}
+
+
+For help on searching on the database, goto SearchingOnDatabase
