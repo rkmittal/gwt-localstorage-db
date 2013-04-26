@@ -34,5 +34,15 @@ rootPanel.add(lqb); // or add it to any other place
 
 Move to the LdbQueryBrowser wiki page for help related to Query browser.
 
+==Applications of this library==
+
+This library has been actively used in one of our applications called mCollect for android. We also did a study where 1.1 million records were collected using the same app. Please read here to find out more:
+[http://handsrel.com/index.php/case-studies/census-of-minor-irrigation-schemes Census of Minor Irrigation schemes]
+
+There are a lot of tests written within the library, which ensure that data is not lost/corrupted during any of the read/write operations. You can have a look at the tests and also run the tests to independently see that the storage api works without any issues.
+
+Even though the library has been used for a long-time without any data loss or issues on data integrity, and it also has tests to ensure that it works correctly, you should read the following warning carefully.
+
 ==Statutory Warning==
+
 The API deals with storage of data on the client-side, and in many cases, the data may be valuable for the user of the application. Any data-loss resulting from the use of this API does not hold me responsible (Read the license text). So you are advised to thoroughly test the API before releasing your application to the public.
