@@ -7,6 +7,10 @@ The steps to using the API are:
   * Download the latest release of gwt-localstorage-api.jar file
   * Also download the latest java-docs, since they will be important in understanding how to use the API.
   * Add the jar file to your build path in Eclipse/put it in your pom.xml as an artifact (The API needs atleast GWT v2.3.0 )
+  * Add the following inherits line in your GWT module xml file.
+{{{
+<inherits name='com.handsrel.localstorage.Localstorage' />
+}}}
   * Include this code, which will initialize the local storage, so that you can start using the API.
 
 {{{
